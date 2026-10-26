@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#faf9f6">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>English Loop｜演講練習筆記</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<style>
+:root{--ink:#25293a;--muted:#687084;--primary:#655bd7;--bg:#faf9f6;--line:#e6e4e8;--white:#fff;--soft:#f1efff;--green:#087757}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif}
+button,input,textarea{font:inherit}a{color:var(--primary)}
+button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}
+:focus-visible{outline:3px solid #ada5ef;outline-offset:3px}
+.wrap{max-width:850px;margin:auto;padding:18px 18px max(55px,env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:17px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:850;font-size:19px;letter-spacing:-.03em}
+.logo{background:var(--primary);color:white;width:35px;height:35px;border-radius:12px;display:grid;place-items:center;font-size:24px}
+.back{font-size:13px;font-weight:700}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:12px;color:var(--primary);font-weight:850}
+h1{font-size:clamp(27px,5vw,37px);letter-spacing:-.045em;line-height:1.25;margin:7px 0 11px}
+h2{font-size:21px;letter-spacing:-.025em;line-height:1.4;margin:0 0 10px}
+h3{font-size:16px;margin:0 0 5px}
+p{margin:7px 0}
+.muted,.hint{color:var(--muted)}.hint{font-size:13px}
+.hero{padding:30px 0 20px}
+.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:16px}
+.soft{background:#f5f3ff;border-color:#e5e0ff}
+.notice{background:#fff9ec;border:1px solid #f2dfbf;border-radius:14px;padding:13px 15px;font-size:13px;color:#705b3d;margin-top:14px}
+label{display:block;font-weight:750;font-size:13px;margin:13px 0 5px}
+.field{width:100%;border:1px solid #dcd9e8;border-radius:11px;padding:12px 13px;background:white;min-height:45px;color:var(--ink)}
+textarea.field{min-height:110px;resize:vertical}
+.field:focus{outline:2px solid #ada5ef;border-color:#aaa3e9}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{border:1px solid var(--line);border-radius:11px;background:white;padding:10px 15px;min-height:44px;color:var(--ink);font-weight:750;text-decoration:none;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.btn.main{background:var(--primary);border-color:var(--primary);color:white}
+.btn.quiet{background:var(--soft);border-color:#e1dcff;color:#554bb5}
+.btn.danger{color:#9b4236}
+.btn:focus-visible{outline-offset:2px}
+.status{font-size:13px;min-height:1.3em;margin-top:9px}
+.status.error{color:#af443d}.status.success{color:var(--green)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{font-size:12px;background:var(--soft);color:#554bb5;border-radius:8px;padding:5px 9px;font-weight:750}
+.cards{display:grid;gap:9px;margin-top:12px}
+.card{display:flex;justify-content:space-between;align-items:center;text-align:left;gap:12px;width:100%;border:1px solid var(--line);border-radius:13px;padding:13px;background:white}
+.card.selected{border-color:#b6adf5;background:#f5f3ff}
+.card strong{display:block;overflow-wrap:anywhere;font-size:14px}
+.card small{display:block;color:var(--muted);font-size:12px}
+.pill{border-radius:99px;padding:4px 8px;background:#ecf7f1;color:var(--green);font-size:11px;white-space:nowrap}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.task{padding:17px 0;border-top:1px solid var(--line)}
+.task:first-of-type{border-top:0}
+.task p{font-size:13px;color:var(--muted)}
+.task strong{font-size:14px}
+.num{color:var(--primary);font-size:12px;font-weight:850;letter-spacing:.04em}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:16px}
+.hidden{display:none!important}
+@media(max-width:560px){.wrap{padding:12px 12px max(35px,env(safe-area-inset-bottom))}.panel{padding:16px;border-radius:16px}.hero{padding:25px 4px 15px}.split{grid-template-columns:1fr}.row .btn{flex:1}.top{padding:4px 0 15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a href="./index.html" class="brand"><span class="logo" aria-hidden="true">↻</span><span>English Loop</span></a>
+<a class="back" href="./index.html">← 返回原本練習</a>
+</header>
+<section class="hero">
+<div class="eyebrow">Link-out learning journal</div>
+<h1>從真人演講<br>練習用自己的英文表達。</h1>
+<p class="muted">在 TED 官網觀看完整演講、使用官方逐字稿；回來寫下自己的理解、複述與反思。這是獨立設計的練習筆記，並非 TED 官方服務。</p>
+<div class="steps"><span class="chip">① 官方網站觀看</span><span class="chip">② 自己說出主旨</span><span class="chip">③ 整理並保存</span></div>
+</section>
+<section class="panel soft" aria-labelledby="policyTitle">
+<h2 id="policyTitle">內容與使用方式</h2>
+<p>TED 演講影片、字幕與逐字稿均留在 <a href="https://www.ted.com/talks" target="_blank" rel="noopener noreferrer">TED 官方網站</a>。English Loop <strong>只保存演講連結、你自己輸入的名稱，以及你撰寫的學習心得</strong>。</p>
+<div class="notice">不下載影片、不擷取或複製逐字稿、不在這裡播放或裁切 TED 影片、不使用 TED 內容製作 AI 分析或衍生題目。請勿在筆記欄貼上演講逐字稿或大段字幕。使用前請確認該演講的可用性與授權條件。</div>
+</section>
+<section class="panel" aria-labelledby="addTitle">
+<h2 id="addTitle">加入一段想聽的演講</h2>
+<form id="addForm" novalidate>
+<label for="url">TED 官方演講網址</label>
+<input class="field" id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.ted.com/talks/..." required maxlength="350">
+<label for="title">我的筆記名稱 <span class="muted">（選填，自行命名）</span></label>
+<input class="field" id="title" name="title" autocomplete="off" placeholder="例如：A talk about leadership" maxlength="90">
+<p class="hint">不會連線擷取影片標題或字幕。可直接從 TED 的分享功能複製網址。</p>
+<div class="row"><button type="submit" class="btn main">＋ 建立練習筆記</button><a class="btn" href="https://www.ted.com/talks" target="_blank" rel="noopener noreferrer">尋找 TED 演講 ↗</a></div>
+<p id="addStatus" class="status" role="status" aria-live="polite"></p>
+</form>
+</section>
+<section class="panel" aria-labelledby="libraryTitle">
+<div class="row" style="justify-content:space-between"><h2 id="libraryTitle">我的練習清單</h2><span id="count" class="hint">0 篇</span></div>
+<div id="library" class="cards"><p class="muted">尚未加入演講。先貼一個 TED 連結試試。</p></div>
+</section>
+<section id="practice" class="panel hidden" aria-labelledby="practiceTitle">
+<div class="eyebrow">Personal learning practice</div>
+<h2 id="practiceTitle">我的練習筆記</h2>
+<p id="currentTitle" class="muted"></p>
+<div class="split" style="margin:15px 0">
+<a id="watchLink" class="btn main" target="_blank" rel="noopener noreferrer">▶ 到 TED 官方觀看完整演講 ↗</a>
+<a id="transcriptLink" class="btn quiet" target="_blank" rel="noopener noreferrer">↗ 到 TED 官網查看逐字稿</a>
+</div>
+<p class="hint">請在 TED 頁面按「Read Transcript」查看可用的互動逐字稿；也可以使用原始播放器的 CC。不是每段演講都有所有語言的字幕。</p>
+<div class="notice">請在官方頁面觀看完整演講，不要以片段剪輯、轉錄或改寫 TED 原有字幕的方式製作教材。此處僅填寫自己的學習回答。</div>
+<div class="task">
+<div class="num">STEP 01 · MAIN IDEA</div>
+<label for="mainIdea">What is the central idea of this talk?</label>
+<p>用自己的英文，說明你理解的核心觀點。</p>
+<textarea id="mainIdea" class="field" maxlength="2400" placeholder="The main idea I took away is…"></textarea>
+</div>
+<div class="task">
+<div class="num">STEP 02 · RECALL</div>
+<label for="details">What are two things you remember?</label>
+<p>離開逐字稿，試著以自己的說法整理兩個重點，不必逐字抄寫。</p>
+<textarea id="details" class="field" maxlength="2400" placeholder="First, I remember… Another point was…"></textarea>
+</div>
+<div class="task">
+<div class="num">STEP 03 · RETELL</div>
+<label for="retell">Explain the idea to a friend in 3–5 sentences.</label>
+<p>先口頭複述，再寫下來。iPhone 可用鍵盤的語音輸入功能。</p>
+<textarea id="retell" class="field" maxlength="3200" placeholder="I just watched a talk about… The speaker's main point was…"></textarea>
+</div>
+<div class="task">
+<div class="num">STEP 04 · REFLECT</div>
+<label for="reflection">How does this connect to your own life or work?</label>
+<p>用英文寫一個自己的觀察或例子，不需要引用演講原句。</p>
+<textarea id="reflection" class="field" maxlength="2400" placeholder="This reminds me of… / I might apply this by…"></textarea>
+</div>
+<div class="row">
+<button id="complete" type="button" class="btn main">✓ 完成這次練習</button>
+<button id="saveNow" type="button" class="btn quiet">儲存筆記</button>
+<button id="delete" type="button" class="btn danger">刪除這篇</button>
+</div>
+<p id="practiceStatus" class="status" role="status" aria-live="polite"></p>
+<p class="hint">筆記輸入後會自動存入本機 Safari。沒有 AI 評分、沒有文字上傳服務，也不會驗證影片內容。瀏覽器清除網站資料將刪除筆記，請定期匯出。</p>
+</section>
+<section class="panel">
+<h2>備份自己的英文筆記</h2>
+<p class="muted">包含你自己填寫的網址、筆記名稱和英文回答，不包含 TED 內容。可儲存成 JSON 備份。</p>
+<button id="export" type="button" class="btn">⬇ 匯出我的練習筆記</button>
+</section>
+<footer>English Loop • 個人非商業學習筆記 • 與 TED 無隸屬或合作關係<br><a href="https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy" target="_blank" rel="noopener noreferrer">TED Talks Usage Policy</a> ・ <a href="https://www.ted.com/about/our-organization/our-policies-terms/ted-com-terms-of-use" target="_blank" rel="noopener noreferrer">TED Terms of Use</a></footer>
+</div>
+<script>
+(function(){
+'use strict';
+const KEY='englishLoopTedNotesV1';
+const $=id=>document.getElementById(id);
+const fields=['mainIdea','details','retell','reflection'];
+let entries=load(),activeId=null;
+function normalizeURL(value){
+  try{
+    const u=new URL(String(value).trim());
+    if(u.protocol!=='https:' || !['ted.com','www.ted.com'].includes(u.hostname.toLowerCase()) || u.port)return null;
+    if(!/^\/talks\/[a-z0-9_-]+\/?$/i.test(u.pathname))return null;
+    return 'https://www.ted.com'+u.pathname.replace(/\/$/,'');
+  }catch(e){return null}
+}
+function safeText(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function load(){
+  try{
+    const v=JSON.parse(localStorage.getItem(KEY));
+    if(!Array.isArray(v))return [];
+    return v.filter(x=>x&&typeof x==='object'&&normalizeURL(x.url)&&typeof x.id==='string').slice(0,50).map(x=>({
+      id:x.id.slice(0,80),url:normalizeURL(x.url),title:typeof x.title==='string'?x.title.slice(0,90):'我的演講筆記',
+      notes:Object.fromEntries(fields.map(k=>[k,typeof x.notes?.[k]==='string'?x.notes[k].slice(0,3200):''])),
+      completedAt:typeof x.completedAt==='string'?x.completedAt:null,updatedAt:typeof x.updatedAt==='string'?x.updatedAt:null
+    }));
+  }catch(e){return []}
+}
+function persist(){
+  try{localStorage.setItem(KEY,JSON.stringify(entries));return true}
+  catch(e){setStatus('practiceStatus','Safari 無法儲存資料，請檢查網站儲存空間。','error');return false}
+}
+function setStatus(id,message,kind){const n=$(id);n.textContent=message;n.className='status '+(kind||'')}
+function uniqueId(){return 'ted-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,9)}
+function active(){return entries.find(x=>x.id===activeId)}
+function renderLibrary(){
+  $('count').textContent=entries.length+' 篇';
+  $('library').innerHTML=entries.length?entries.map(x=>
+    '<button type="button" class="card'+(x.id===activeId?' selected':'')+'" data-entry="'+safeText(x.id)+'" aria-pressed="'+(x.id===activeId)+'">'+
+    '<span><strong>'+safeText(x.title||'我的演講筆記')+'</strong><small>TED 官方連結 · '+(x.completedAt?'已完成過練習':'尚未完成')+'</small></span>'+
+    (x.completedAt?'<span class="pill">✓ 完成</span>':'<span class="hint">開啟 →</span>')+'</button>'
+  ).join(''):'<p class="muted">尚未加入演講。先貼一個 TED 連結試試。</p>';
+}
+function openEntry(id){
+  const x=entries.find(e=>e.id===id);
+  if(!x)return;
+  activeId=id;
+  $('practice').classList.remove('hidden');
+  $('currentTitle').textContent=x.title;
+  $('watchLink').href=x.url;
+  $('transcriptLink').href=x.url;
+  fields.forEach(k=>$(k).value=x.notes[k]||'');
+  setStatus('practiceStatus',x.completedAt?'這篇筆記已完成過練習，仍可繼續修改。':'內容會自動儲存在本機。');
+  renderLibrary();
+}
+function recordNotes(){
+  const x=active();if(!x)return false;
+  fields.forEach(k=>x.notes[k]=$(k).value.slice(0,k==='retell'?3200:2400));
+  x.updatedAt=new Date().toISOString();
+  return persist();
+}
+$('addForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const url=normalizeURL($('url').value),title=$('title').value.trim();
+  if(!url){setStatus('addStatus','請輸入 https://www.ted.com/talks/... 格式的 TED 官方演講網址。','error');return}
+  const existing=entries.find(x=>x.url===url);
+  if(existing){openEntry(existing.id);setStatus('addStatus','這個演講已在你的清單中，已替你開啟。','success');$('practice').scrollIntoView({behavior:'smooth'});return}
+  if(entries.length>=50){setStatus('addStatus','最多可保存 50 篇，請先匯出備份或刪除舊筆記。','error');return}
+  const x={id:uniqueId(),url,title:title||'我的演講筆記 '+(entries.length+1),notes:{mainIdea:'',details:'',retell:'',reflection:''},completedAt:null,updatedAt:null};
+  entries.unshift(x);
+  if(!persist()){entries.shift();setStatus('addStatus','儲存失敗，無法新增筆記。','error');return}
+  $('url').value='';$('title').value='';
+  openEntry(x.id);setStatus('addStatus','已新增練習筆記。請在 TED 官網觀看完整影片。','success');$('practice').scrollIntoView({behavior:'smooth'});
+});
+$('library').addEventListener('click',e=>{
+  const b=e.target.closest('[data-entry]');if(b)openEntry(b.dataset.entry);
+});
+fields.forEach(k=>$(k).addEventListener('input',()=>{recordNotes()}));
+$('saveNow').addEventListener('click',()=>{setStatus('practiceStatus',recordNotes()?'已儲存你的英文筆記。':'儲存失敗，請檢查本機儲存空間。',recordNotes()?'success':'error')});
+$('complete').addEventListener('click',()=>{
+  const x=active();if(!x)return;
+  const retell=$('retell').value.trim();
+  if(retell.split(/\s+/).filter(Boolean).length<12){setStatus('practiceStatus','請先用自己的英文完成至少 12 個字的複述，再標記完成。','error');return}
+  if(!recordNotes())return;
+  x.completedAt=new Date().toISOString();
+  if(persist()){renderLibrary();setStatus('practiceStatus','✓ 已完成並儲存！下次可以回來比較自己的英文表達。','success')}
+});
+$('delete').addEventListener('click',()=>{
+  const x=active();if(!x||!window.confirm('確定刪除這篇演講連結與你的全部英文筆記嗎？'))return;
+  const old=entries.slice();entries=entries.filter(e=>e.id!==activeId);
+  if(!persist()){entries=old;return}
+  activeId=null;$('practice').classList.add('hidden');renderLibrary();
+  setStatus('addStatus','已刪除一篇筆記。','success');
+});
+$('export').addEventListener('click',()=>{
+  const file={exportedAt:new Date().toISOString(),app:'English Loop TED link-out journal',notes:entries};
+  const blob=new Blob([JSON.stringify(file,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='english-loop-personal-notes.json';document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),2000);
+});
+renderLibrary();
+if('serviceWorker' in navigator&&location.protocol==='https:')window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+})();
+</script>
+</body>
+</html>
