@@ -33,3 +33,23 @@
 ## 技術
 
 Vanilla HTML / CSS / JS、YouTube IFrame Player API、Web App Manifest、Service Worker。所有既有 8 篇原創文字教材保留。
+
+## TED 演講連結練習（policy-first）
+
+在網站首頁點 **「TED 官方演講・練習筆記」**，或直接開啟 `ted.html`：
+
+1. 在 [TED 官方演講庫](https://www.ted.com/talks) 選擇演講，貼入 `https://www.ted.com/talks/...` 官方連結。
+2. 點「到 TED 官方觀看完整演講」，在 **TED 原站**使用完整播放器。想看官方逐字稿時，在 TED 頁面點 **Read Transcript**（依影片及裝置可用性而定）。
+3. 回到 English Loop，以自己的英文回答主旨、記得的重點、複述與反思四個**通用**提示。
+4. 本機自動儲存自己的回答；可標記完成、刪除，或匯出 JSON 備份。
+
+**授權與技術邊界（截至 2026-10-26 檢視）：**
+
+- English Loop 是獨立的個人非商業學習筆記，**不是 TED 官方或合作服務**；不使用 TED 商標或照片裝飾。
+- **只儲存官方連結、使用者自行命名的標題及其自行撰寫的英文筆記**；不提供內嵌 TED 影片、影片剪輯、重配音、下載、逐字稿擷取、字幕複製、字幕時間碼或衍生填空題。
+- 不用任何爬蟲、轉錄機器人或 AI 模型處理 TED 內容；請勿把 TED 原始逐字稿貼入筆記欄，並避免貼入大段演講原文。
+- TED 的內容使用政策明確限制非商業、禁止改作；持續以 TED 內容做結構化課程或用於 AI 工作流程可能需要**書面授權**。即使設計為外部連結與使用者個人心得，也應在擴大公開經營、營利或改成正式課程前重新確認授權。
+- TED 條款：[TED Talks Usage Policy](https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy)、[TED Terms of Use](https://www.ted.com/about/our-organization/our-policies-terms/ted-com-terms-of-use)、[官方逐字稿說明](https://help.ted.com/hc/en-us/articles/360018572954-How-do-I-find-transcripts-for-TED-and-TEDx-talks)。
+- TED 影片、逐字稿都在 **TED 官方網站**查看，需要網路。GitHub Pages 不會自動下載任何 TED 內容。
+
+這一版刻意**不整合 TED CC 字幕內容進行填空／自動評分**，也**不修改 YouTube 和 Gemini 功能**。若要把 TED 逐字稿轉成常態練習素材，應先向 TED 申請適當的內容授權。
