@@ -220,7 +220,7 @@ $('library').addEventListener('click',e=>{
   const b=e.target.closest('[data-entry]');if(b)openEntry(b.dataset.entry);
 });
 fields.forEach(k=>$(k).addEventListener('input',()=>{recordNotes()}));
-$('saveNow').addEventListener('click',()=>{setStatus('practiceStatus',recordNotes()?'已儲存你的英文筆記。':'儲存失敗，請檢查本機儲存空間。',recordNotes()?'success':'error')});
+$('saveNow').addEventListener('click',()=>{const saved=recordNotes();setStatus('practiceStatus',saved?'已儲存你的英文筆記。':'儲存失敗，請檢查本機儲存空間。',saved?'success':'error')});
 $('complete').addEventListener('click',()=>{
   const x=active();if(!x)return;
   const retell=$('retell').value.trim();
